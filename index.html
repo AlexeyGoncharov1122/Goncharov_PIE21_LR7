@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Игра "Набери слова песни"</title>
+    <style>
+        #maket {
+            width: 100%; /* Ширина всей таблицы */
+        }
+        body {
+            text-align: center;
+            background-image: url(files/flag.png);
+            background-size: cover;
+        }
+        input {
+            font-size: 130%;
+            width: 95%;
+            padding: 16px 20px;
+            margin: 8px;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+        button {
+            font-size: 130%;
+            border: 2px solid red;
+            padding: 10px;
+        }
+        button#start {
+            font-size: 200%;
+            border: 2px solid red;
+            padding: 10px 24px;
+            margin: 4px;
+        }
+        button#restart {
+            font-size: 200%;
+            border: 2px solid red;
+            padding: 10px 24px;
+            margin: 4px;
+        }
+        h2 {
+            font-size: 150%;
+            width: 100%;
+        }
+        h1 {
+            font-size: 225%;
+        }
+        p {
+            font-size: 170%;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Игра "Набери слова песни"</h1>
+    <p align="center">Вам предлагается набрать за ограниченное время 100 слов из песни "Мы армия страны, 
+                       мы армия народа". Слова необходимо набирать точь в точь, на кириллице.</p>
+    <table cellspacing="5" id="maket">
+        <tr>
+            <td>
+                <h2 align="center" id="text2">Введено слов: 0</h2>
+            </td>
+            <td>
+                <h2 align="center" id="text3">Осталось времени: 0:0</h2>
+            </td>
+        </tr>
+    </table>
+    <h2 align="center" id="text1">Введите слово: Стоим</h2>
+    <table cellspacing="5" id="maket">
+        <tr>
+            <td id="leftcol">
+                <input align="center" type="text" id="word" oninput="entering_the_word()">
+            </td>
+            <td id="rightcol">
+                <button id="input" onclick="set_word()">Очистить поле</button>
+            </td>
+        </tr>
+    </table>
+    <button id="start" onclick="start()">Начать игру</button>
+    <button id="restart" onclick="restart()">Начать заново</button>
+    <br><br>
+    <a align="left" href="files/Goncharov_PIE-21_LR7.pdf">Посмотреть отчёт по лабораторной работе</a>
+    <script src="files/LR7.js"></script>
+</body>
+</html>
